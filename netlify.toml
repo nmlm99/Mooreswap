@@ -1,4 +1,0 @@
-[build]
-command = "npm run build"
-publish="https://github.com/tyranchristian010/EthSwap-DApp/build"
-base="https://github.com/tyranchristian010/EthSwap-DApp"
