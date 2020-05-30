@@ -1,7 +1,7 @@
 {
   "name": "EthSwap",
   "version": "0.1.0",
-  "description": "AnInstant ERC-20 Cryptocurrency Exchange",
+  "description": "An Instant ERC-20 Cryptocurrency Exchange",
   "author": "tyranchristian010@gmail.com",
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.0.35",
