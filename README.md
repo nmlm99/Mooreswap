@@ -1,5 +1,5 @@
 # EthSwap-DApp
-EthSwap: An Instant ERC-20 Cryptocurrency Exchange that allows you to buy and sell cryptocurrenvu at a fixed price. You can buy or sell instantly 
+EthSwap: An Instant ERC-20 Cryptocurrency Exchange that allows you to buy and sell cryptocurrency at a fixed price. You can buy or sell instantly 
 without having to open a buy or sell order or wait for someone to fill your order. Inside the DApp we are going to trade two different cryptocurrencies.
 The first is Ethereum which is the native currency of the Ethereum blockchain. The second is the DApp token which we will create inside our DApp.
 We will purchase the DApp token with Ethereum and watch our balances increase and decrease before and after purchases. We will also be able to sell the DApp 
