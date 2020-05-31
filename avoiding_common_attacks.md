@@ -1,0 +1,16 @@
+Three common smart contract attacks are:
+
+1. Integer Overflow and Underflow
+
+If a balance reaches the maximum uint value (2^256) it will circle back to zero which checks for the condition. This may or may not be relevant, depending on the implementation. Think about whether or not the uint value has an opportunity to approach such a large number. Think about how the uint variable changes state, and who has authority to make such changes. If any user can call functions which update the uint value, it's more vulnerable to attack. If only an admin has access to change the variable's state, you might be safe. If a user can increment by only 1 at a time, you are probably also safe because there is no feasible way to reach this limit.
+
+The same is true for underflow. If a uint is made to be less than zero, it will cause an underflow and get set to its maximum value.
+
+
+2.Reentrancy
+One of the major dangers of calling external contracts is that they can take over the control flow, and make changes to your data that the calling function wasn't expecting. This class of bug can take many forms, and both of the major bugs that led to the DAO's collapse were bugs of this sort. the best way to prevent this attack is to make sure you don't call an external function until you've done all the internal work you need to do.
+
+3.Front-Running
+Since all transactions are visible in the mempool for a short while before being executed, observers of the network can see and react to an action before it is included in a block. An example of how this can be exploited is with a decentralized exchange where a buy order transsaction can be seen, and second order can be broadcast and executed before the first transaction is included. Protecting against this is difficult, as it would come down to the specific contract itself.
+
+Front-running, coined originally for traditional financial markets, is the race to order the chaos to the winners benefit. In financial markets, the flow of information gave birth to intermediaries that could simply profit by being the first to know and react to some information. These attacks mostly had been within stock market deals.
